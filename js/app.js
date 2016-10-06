@@ -24,7 +24,7 @@ app.config(
       .state('projects.index', {
         url: '/',
         views: {
-          'index': {
+          index: {
             templateUrl: 'js/templates/projects_index.html',
             controller: 'ProjectsCtrl'
           }

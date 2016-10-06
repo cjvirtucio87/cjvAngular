@@ -2,18 +2,25 @@ app.factory('ProjectService',
 ['Restangular', '_', function(Restangular, _) {
 
   var ProjectService = {};
-  var _projects;
+  var _projects = [];
+
+  function _cacheProjects () {
+    return Restangular.all('repos')
+               .getList()
+               .then(function(response) {
+                 angular.copy(response,_projects);
+                 return _projects;
+               })
+               .catch(function(reason) {
+                 console.log(reason);
+               });
+  }
 
   ProjectService.all = function() {
     if (_.isEmpty(_projects)) {
-      Restangular.all('repos')
-                 .getList()
-                 .then(function(response) {
-                   console.log(response);
-                 })
-                 .catch(function(reason) {
-                   console.log(reason);
-                 });
+      return _cacheProjects();
+    } else {
+      return _projects;
     }
   };
 
