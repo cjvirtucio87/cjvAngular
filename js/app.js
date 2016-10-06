@@ -14,7 +14,6 @@ app.config(
 
     // Restangular
     RestangularProvider.setBaseUrl('https://api.github.com/users/cjvirtucio87');
-    RestangularProvider.setRequestSuffix('.json');
 
     $urlRouterProvider.otherwise('/');
 
