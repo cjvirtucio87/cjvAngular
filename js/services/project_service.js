@@ -6,7 +6,11 @@ app.factory('ProjectService',
 
   function _cacheProjects () {
     return Restangular.all('repos')
-               .getList()
+               .getList({
+                 type: 'owner',
+                 sort: 'updated',
+                 direction: 'desc'
+               })
                .then(function(response) {
                  angular.copy(response,_projects);
                  return _projects;
