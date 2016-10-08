@@ -1,15 +1,13 @@
-<div class="card">
+<a href="{{project.html_url}}">
   <div class="card-block card-header">
     <p class="lead">
-      <a href="{{project.html_url}}">
-        {{ project.name }}
-      </a>
+      {{ project.name }}
     </p>
   </div>
-  <div class="card-block">
-    <p class="text-muted">
-      {{ project.updated_at | date:'fullDate' }}
-    </p>
-    <p>{{ project.description }}</p>
-  </div>
+</a>
+<div class="card-block">
+  <p class="text-muted">
+    {{ project.updated_at | date:'fullDate' }}
+  </p>
+  <p>{{ project.description }}</p>
 </div>

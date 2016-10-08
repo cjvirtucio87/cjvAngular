@@ -41,9 +41,11 @@ div.projects-index {
 
 /* Mobile */
 @media screen
-  and (max-width: 1024px) {
+  and (max-width: 1080px) {
     .fixed-sidecard {
       position: relative;
+      left: 0;
+      top: 0;
     }
 
     h3.title-header {
@@ -53,6 +55,6 @@ div.projects-index {
 
     div.projects-index {
       margin-top: 0px;
-      margin-left: 30px;
+      margin-left: 0px;
     }
 }
