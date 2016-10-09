@@ -1,3 +1,9 @@
+.card {
+  -webkit-box-shadow: 1px 3px 18px -5px rgba(0,0,0,0.83);
+  -moz-box-shadow: 1px 3px 18px -5px rgba(0,0,0,0.83);
+  box-shadow: 1px 3px 18px -5px rgba(0,0,0,0.83);
+}
+
 .card-header {
   background-color: #03A9F4;
   color: white;
@@ -11,8 +17,8 @@
 
 .fixed-sidecard {
   position: fixed;
-  left: 15;
-  top: 15;
+  left: 80;
+  top: 30;
 }
 
 a {
