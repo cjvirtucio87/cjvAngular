@@ -1,65 +1,70 @@
+section.row {
+  height: 100vh;
+  font-size: 1.50em; }
+  section.row div.col-md-6 {
+    text-align: center; }
+
+section.row#landing-start {
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white; }
+
+section.row#landing-legal-writing {
+  background-image: url("/img/legal-writing.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white; }
+
 .card {
-  -webkit-box-shadow: 1px 3px 18px -5px rgba(0,0,0,0.83);
-  -moz-box-shadow: 1px 3px 18px -5px rgba(0,0,0,0.83);
-  box-shadow: 1px 3px 18px -5px rgba(0,0,0,0.83);
-}
+  -webkit-box-shadow: 1px 3px 18px -5px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 1px 3px 18px -5px rgba(0, 0, 0, 0.83);
+  box-shadow: 1px 3px 18px -5px rgba(0, 0, 0, 0.83); }
 
 .card-header {
   background-color: #03A9F4;
-  color: white;
-}
+  color: white; }
 
 .icon {
-  margin: 5px;
-}
+  margin: 5px; }
 
 .fixed-sidecard {
   position: fixed;
   left: 80;
-  top: 30;
-}
+  top: 30; }
 
 a {
-  color: inherit;
-}
+  color: inherit; }
 
 a:hover {
   text-decoration: none;
-  color: #FFEB3B;
-  pointer: cursor;
-}
-
-body {
-  margin-top: 15px;
-}
+  color: #99ccff;
+  cursor: pointer; }
 
 h3.title-header {
   position: fixed;
   margin-left: 15px;
-  text-align: center;
-}
+  text-align: center; }
 
 div.projects-index {
   margin-top: 30px;
-  margin-left: 15px;
-}
+  margin-left: 15px; }
 
 /* Mobile */
-@media screen
-  and (max-width: 1080px) {
-    .fixed-sidecard {
-      position: relative;
-      left: 0;
-      top: 0;
-    }
+@media screen and (max-width: 1080px) {
+  .fixed-sidecard {
+    position: relative;
+    left: 0;
+    top: 0; }
 
-    h3.title-header {
-      position: relative;
-      margin-top: 30px;
-    }
+  h3.title-header {
+    position: relative;
+    margin-top: 30px; }
 
-    div.projects-index {
-      margin-top: 0px;
-      margin-left: 0px;
-    }
-}
+  div.projects-index {
+    margin-top: 0px;
+    margin-left: 0px; } }
+
+/*# sourceMappingURL=style.css.map */

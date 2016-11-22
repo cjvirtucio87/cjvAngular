@@ -8,31 +8,27 @@ app.factory('_', ['$window', function($window) {
   return $window._;
 }]);
 
-app.config(
-  ['$stateProvider', '$urlRouterProvider', 'RestangularProvider',
-  function($stateProvider, $urlRouterProvider, RestangularProvider) {
-
-    // Restangular
-    RestangularProvider.setBaseUrl('https://api.github.com/users/cjvirtucio87');
-
-    $urlRouterProvider.otherwise('/');
-
-    $stateProvider
-      .state('projects', {
-        abstract: true,
-      })
-      .state('projects.index', {
-        url: '/',
-        views: {
-          'index@': {
-            templateUrl: 'js/templates/projects_index.html',
-            controller: 'ProjectsCtrl'
-          }
-        },
-        resolve: {
-          projects: ['ProjectService', function(ProjectService){
-            return ProjectService.all();
-          }]
-        }
-      });
-}]);
+app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
+        // HTTP
+        $httpProvider.defaults.headers.common.Authorization = 'Token e87ff33a69697d863a40d2eb0b4d7a2c34fd373e';
+        // Routing
+        $urlRouterProvider.otherwise('/');
+        $stateProvider
+            .state('landing', {
+            url: '/',
+            views: {
+                '@': {
+                    templateUrl: 'js/templates/unnamed.html'
+                },
+                '1@': {
+                    templateUrl: 'js/templates/one.html'
+                },
+                '2@': {
+                    templateUrl: 'js/templates/two.html'
+                },
+                '3@': {
+                    templateUrl: 'js/templates/three.html'
+                }
+            }
+        });
+    }]);
